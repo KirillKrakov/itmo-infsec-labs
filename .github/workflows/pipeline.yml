@@ -62,7 +62,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: spotbugs-report
-          path: |
-            spotbugsXml.xml
-            spotbugs-sarif.xml
+          path: spotbugs-sarif.xml
           if-no-files-found: warn
