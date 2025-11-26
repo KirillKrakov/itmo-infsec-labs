@@ -54,7 +54,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: snyk-report
-          path: snyk-report.json
+          path: docs/snyk-report.json
           if-no-files-found: warn
 
       - name: Upload SpotBugs report
@@ -62,5 +62,9 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: spotbugs-report
-          path: spotbugs-sarif.xml
+          path: |
+            docs/spotbugsXml.xml
+            docs/spotbugs-sarif.xml
+            docs/*spotbugs*.xml
+            docs/*spotbugs*.sarif
           if-no-files-found: warn
