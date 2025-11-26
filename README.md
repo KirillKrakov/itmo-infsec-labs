@@ -133,23 +133,23 @@ curl -s -X DELETE http://localhost:8081/api/v1/notes/1 \
 ## SAST/SCA отчёты (CI/CD)
 
 - **SAST (SpotBugs)** — отчёт и скриншот:
-  - Скриншот: 
-  - Отчёты: 
+  - Скриншот: ![SpotBugs](docs/spotbugs-report-screenshot.png)
+  - Отчёты: [`docs/spotbugsXml.xml`](docs/spotbugsXml.xml)
 
 - **SCA (Snyk)** — отчёт и скриншот:
-  - Скриншот: 
-  - Отчёты: 
+  - Скриншот: ![Snyk](docs/snyk-report-screenshot.png)
+  - Отчёты: [`docs/snyk-report.json`](docs/snyk-report.json)
 
 Скриншоты соответствуют выполненным пайплайнам в разделе GitHub Actions репозитория.
 
 
-## Postman коллекция
-- Коллекция:
-- Окружение:
- - Скриншоты (Postman):
-   - Логин: 
-   - Авторизованный POST /api/v1/notes: 
-   - Авторизованное DELETE /api/v1/notes/{id}:
-   - Неавторизованный GET /api/v1/notes:
-   - Неавторизованное DELETE /api/v1/devices/{id}: 
+## Postman скриншоты
+- Register: ![Register](docs/user-register-screenshot.png)
+- Логин: ![Login](docs/user-login-screenshot.png)
+- Авторизованный POST /api/v1/notes: ![Create 1](docs/note-create-1-screenshot.png) ![Create 2](docs/note-create-2-screenshot.png)
+- Авторизованное GET /api/v1/notes: ![Get Auth](docs/note-get-auth-screenshot.png)
+- Авторизованное PUT /api/v1/notes: ![Update Auth](docs/note-update-screenshot.png)
+- Авторизованное DELETE /api/v1/notes/{id}: ![Delete Auth](docs/note-delete-auth-screenshot.png)
+- Неавторизованный GET /api/v1/notes: ![Get Unauth](docs/note-get-unauth-screenshot.png)
+- Неавторизованное DELETE /api/v1/devices/{id}: ![Get Unauth](docs/note-delete-unauth-screenshot.png)
 
