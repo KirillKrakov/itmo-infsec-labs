@@ -42,7 +42,7 @@ public class UserNoteService {
         UserNote note = userNoteRepository.findByIdAndUsername(id, username)
                 .orElseThrow(() -> new IllegalArgumentException("Note not found"));
         note.setNoteTitle(request.getNoteTitle());
-        note.setNoteTitle(request.getNoteContent());
+        note.setNoteContent(request.getNoteContent());
         note.setLastModifiedAt(Instant.now());
         UserNote saved = userNoteRepository.save(note);
         return toResponse(saved);
