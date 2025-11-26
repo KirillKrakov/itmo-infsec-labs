@@ -63,6 +63,6 @@ jobs:
         with:
           name: spotbugs-report
           path: |
-            spotbugsXml.xml
-            spotbugs-sarif.xml
+            **/target/spotbugsXml.xml
+            **/target/spotbugs-sarif.xml
           if-no-files-found: warn
