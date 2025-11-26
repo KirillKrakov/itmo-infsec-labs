@@ -43,7 +43,7 @@ public class SecurityConfig {
                 .authorizeHttpRequests(authorize -> authorize
                         .requestMatchers("/api/v1/auth/**")
                         .access(new WebExpressionAuthorizationManager("hasIpAddress('127.0.0.1') or hasIpAddress('::1')"))
-                        .requestMatchers("/api/v1/devices/**")
+                        .requestMatchers("/api/v1/notes/**")
                         .access(new WebExpressionAuthorizationManager(
                                 "isAuthenticated() and (hasIpAddress('127.0.0.1') or hasIpAddress('::1'))"))
                         .anyRequest().denyAll());
